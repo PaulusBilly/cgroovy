@@ -273,6 +273,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: background 0.18s;
+  cursor: pointer;
+}
+.curated-pick:hover {
+  background: #232323;
 }
 .curated-pick img {
   width: 168px;

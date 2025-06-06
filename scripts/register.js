@@ -2,12 +2,96 @@ const form = document.getElementById("registerForm");
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirmPassword");
 const formError = document.getElementById("formError");
+
 form.addEventListener("submit", function (e) {
   formError.style.display = "none";
-  if (password.value !== confirmPassword.value) {
+  formError.textContent = "";
+
+  const fullname = form.fullname.value.trim();
+  const email = form.email.value.trim();
+  const age = form.age.value.trim();
+  const gender = form.gender.value;
+  const pwd = password.value;
+  const confirmPwd = confirmPassword.value;
+
+  // Full name required
+  if (!fullname) {
+    e.preventDefault();
+    formError.textContent = "Full name is required.";
+    formError.style.display = "block";
+    form.fullname.focus();
+    return;
+  }
+
+  // Email required and format
+  if (!email) {
+    e.preventDefault();
+    formError.textContent = "Email is required.";
+    formError.style.display = "block";
+    form.email.focus();
+    return;
+  } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+    e.preventDefault();
+    formError.textContent = "Please enter a valid email address.";
+    formError.style.display = "block";
+    form.email.focus();
+    return;
+  }
+
+  // Password required and min length
+  if (!pwd) {
+    e.preventDefault();
+    formError.textContent = "Password is required.";
+    formError.style.display = "block";
+    password.focus();
+    return;
+  } else if (pwd.length < 6) {
+    e.preventDefault();
+    formError.textContent = "Password must be at least 6 characters.";
+    formError.style.display = "block";
+    password.focus();
+    return;
+  }
+
+  // Confirm password required and match
+  if (!confirmPwd) {
+    e.preventDefault();
+    formError.textContent = "Please confirm your password.";
+    formError.style.display = "block";
+    confirmPassword.focus();
+    return;
+  } else if (pwd !== confirmPwd) {
     e.preventDefault();
     formError.textContent = "Passwords do not match.";
     formError.style.display = "block";
     confirmPassword.focus();
+    return;
   }
+
+  // Age required and range
+  if (!age) {
+    e.preventDefault();
+    formError.textContent = "Age is required.";
+    formError.style.display = "block";
+    form.age.focus();
+    return;
+  } else if (isNaN(age) || age < 13 || age > 120) {
+    e.preventDefault();
+    formError.textContent = "Age must be between 13 and 120.";
+    formError.style.display = "block";
+    form.age.focus();
+    return;
+  }
+
+  // Gender required
+  if (!form.gender.value) {
+    e.preventDefault();
+    formError.textContent = "Please select your gender.";
+    formError.style.display = "block";
+    return;
+  }
+
+  // Redirect to index.html on successful validation
+  e.preventDefault();
+  window.location.href = "index.html";
 });
