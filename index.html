@@ -1,135 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>C'Groovy</title>
-    <link rel="stylesheet" href="./assets/home.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <title>C'Groovy - Home</title>
   </head>
   <body>
-    <header>
-      <div class="logo">C'GROOVY</div>
-      <nav>
-        <a href="../home/index.html">Home</a>
-        <a href="../songcollection/index.html">Songs</a>
-        <a href="../aboutus/index.html">About Us</a>
+    <header class="home-header">
+      <nav class="navbar">
+        <div class="navbar-left">
+          <span class="logo"><b>C'GROOVY</b></span>
+          <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Songs</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+        <div class="navbar-right">
+          <a href="#" class="signin-btn">Sign In</a>
+          <a href="#" class="create-account-btn">Create Account</a>
+        </div>
       </nav>
-      <div class="auth-buttons">
-        <a href="../login/index.html" class="signin">Sign In</a>
-        <a href="../sign up/index.html" class="signup">Create Account</a>
-      </div>
     </header>
-
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Feel the Beat.<br />Live the Groove.</h1>
-        <p>
-          Stream your favorite tracks from around the world anytime, anywhere.
-          Dive into the rhythm with C’Groovy’s seamless, personalized music
-          experience.
-        </p>
-        <button>Start Listening</button>
-      </div>
-      <div class="hero-image">
-        <img src="bd01e087-ae1c-4b0c-b030-aa17ad313dab.png" alt="Hero" />
-      </div>
-    </section>
-
-    <section class="trending">
-      <div class="trending-text">
-        <h2><span>Most-Streamed,</span><br />Most-Loved</h2>
-        <h3>Best Sellers on C’Groovy.</h3>
-        <p>
-          These fan favorites have topped the charts and move our listeners
-          every day. From global hits to local legends, press play and feel the
-          pulse of today’s musical trends.
-        </p>
-        <button>Explore Trending Songs</button>
-      </div>
-      <div class="trending-list">
-        <ul>
-          <li>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/0/02/Kendrick_Lamar_-_Luther.jpg"
-              alt="Luther"
-            />
-            <span>Luther<br /><small>Kendrick Lamar</small></span>
-            <span class="streams">881M Streams</span>
-          </li>
-          <li>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/1/11/Birdsofafeather.jpg"
-              alt="Birds of a Feather"
-            />
-            <span>Birds of a Feather<br /><small>Billie Eilish</small></span>
-            <span class="streams">881M Streams</span>
-          </li>
-          <li>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/4/4c/Olivia_Rodrigo_-_Espresso.png"
-              alt="Espresso"
-            />
-            <span>Espresso<br /><small>Olivia Rodrigo</small></span>
-            <span class="streams">881M Streams</span>
-          </li>
-          <li>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/b/b4/Tyler%2C_the_Creator_-_Thought_I_Was_Dead.png"
-              alt="Thought I Was Dead"
-            />
-            <span
-              >Thought I Was Dead<br /><small>Tyler The Creator</small></span
-            >
-            <span class="streams">881M Streams</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="albums">
-      <h2>Start Your Journey Through<br />Music with Our Curated Picks</h2>
-      <div class="album-grid">
-        <div class="album">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png"
-            alt="Time"
-          />
-          <p><strong>Time</strong><br />Pink Floyd</p>
-        </div>
-        <!-- Repeat album card 5 times -->
-        <div class="album">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png"
-            alt="Time"
-          />
-          <p><strong>Time</strong><br />Pink Floyd</p>
-        </div>
-        <div class="album">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png"
-            alt="Time"
-          />
-          <p><strong>Time</strong><br />Pink Floyd</p>
-        </div>
-        <div class="album">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png"
-            alt="Time"
-          />
-          <p><strong>Time</strong><br />Pink Floyd</p>
-        </div>
-        <div class="album">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png"
-            alt="Time"
-          />
-          <p><strong>Time</strong><br />Pink Floyd</p>
+    <main>
+      <div
+        class="hero"
+        style="background-image: url('assets/home-assets/hero-image.jpg')"
+      >
+        <div class="hero-content">
+          <h1>Feel the Beat.<br />Live the Groove.</h1>
+          <p>
+            Stream your favorite tracks from around the world anytime, anywhere.
+            Dive into the rhythm with C'Groovy's seamless, personalized music
+            experience.
+          </p>
+          <button class="cta-btn">Start Listening</button>
         </div>
       </div>
-    </section>
-
-    <footer>
-      <p>Copyright &copy; 2025 C'Groovy. All Rights Reserved.</p>
+      <div class="bestsellers-section">
+        <div class="bestsellers-info">
+          <h2>
+            <span class="muted">Most-Streamed,<br />Most-Loved</span><br />Best
+            Sellers on C'Groovy.
+          </h2>
+          <p>
+            Here are the tracks that everyone's talking about. These fan
+            favorites have topped the charts on C'Groovy and continue to
+            inspire, energize, and move our listeners every day. From global
+            hits to local legends, press play and feel the pulse of today's
+            musical trends.
+          </p>
+          <button class="explore-btn">Explore Trending Songs</button>
+        </div>
+        <div class="bestsellers-list">
+          <ul>
+            <li>
+              <div class="bestseller-item">
+                <div class="bestseller-img-wrap">
+                  <img
+                    src="assets/home-assets/kendrick.png"
+                    alt="Luther album cover by Kendrick Lamar"
+                  />
+                </div>
+                <div class="bestseller-info-wrap">
+                  <span class="track-title">Luther</span><br />
+                  <span class="track-artist">Kendrick Lamar</span>
+                </div>
+                <div class="streams streams-right">89M Streams</div>
+              </div>
+            </li>
+            <li>
+              <div class="bestseller-item">
+                <div class="bestseller-img-wrap">
+                  <img
+                    src="assets/home-assets/billie.png"
+                    alt="Birds of a Feather album cover by Billie Eilish"
+                  />
+                </div>
+                <div class="bestseller-info-wrap">
+                  <span class="track-title">Birds of a Feather</span><br />
+                  <span class="track-artist">Billie Eilish</span>
+                </div>
+                <div class="streams streams-right">63M Streams</div>
+              </div>
+            </li>
+            <li>
+              <div class="bestseller-item">
+                <div class="bestseller-img-wrap">
+                  <img
+                    src="assets/home-assets/sabrina.png"
+                    alt="Espresso album cover by Sabrina Carpenter"
+                  />
+                </div>
+                <div class="bestseller-info-wrap">
+                  <span class="track-title">Espresso</span><br />
+                  <span class="track-artist">Sabrina Carpenter</span>
+                </div>
+                <div class="streams streams-right">44M Streams</div>
+              </div>
+            </li>
+            <li>
+              <div class="bestseller-item">
+                <div class="bestseller-img-wrap">
+                  <img
+                    src="assets/home-assets/tyler.png"
+                    alt="Thought I Was Dead album cover by Tyler, The Creator"
+                  />
+                </div>
+                <div class="bestseller-info-wrap">
+                  <span class="track-title">Thought I Was Dead</span><br />
+                  <span class="track-artist">Tyler, The Creator</span>
+                </div>
+                <div class="streams streams-right">32M Streams</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="curated-picks-section">
+        <h2>Start Your Journey Through Music with Our Curated Picks</h2>
+        <div class="curated-picks-list">
+          <div class="curated-pick">
+            <div class="curated-pick-img-wrap">
+              <img
+                src="assets/home-assets/pink-floyd.png"
+                alt="Pink Floyd - Time album cover"
+              />
+            </div>
+            <div class="curated-pick-info-wrap">
+              <span class="track-title">Time</span><br />
+              <span class="track-artist">Pink Floyd</span>
+            </div>
+          </div>
+          <div class="curated-pick">
+            <div class="curated-pick-img-wrap">
+              <img
+                src="assets/home-assets/pink-floyd.png"
+                alt="Pink Floyd - Time album cover"
+              />
+            </div>
+            <div class="curated-pick-info-wrap">
+              <span class="track-title">Time</span><br />
+              <span class="track-artist">Pink Floyd</span>
+            </div>
+          </div>
+          <div class="curated-pick">
+            <div class="curated-pick-img-wrap">
+              <img
+                src="assets/home-assets/pink-floyd.png"
+                alt="Pink Floyd - Time album cover"
+              />
+            </div>
+            <div class="curated-pick-info-wrap">
+              <span class="track-title">Time</span><br />
+              <span class="track-artist">Pink Floyd</span>
+            </div>
+          </div>
+          <div class="curated-pick">
+            <div class="curated-pick-img-wrap">
+              <img
+                src="assets/home-assets/pink-floyd.png"
+                alt="Pink Floyd - Time album cover"
+              />
+            </div>
+            <div class="curated-pick-info-wrap">
+              <span class="track-title">Time</span><br />
+              <span class="track-artist">Pink Floyd</span>
+            </div>
+          </div>
+          <div class="curated-pick">
+            <div class="curated-pick-img-wrap">
+              <img
+                src="assets/home-assets/pink-floyd.png"
+                alt="Pink Floyd - Time album cover"
+              />
+            </div>
+            <div class="curated-pick-info-wrap">
+              <span class="track-title">Time</span><br />
+              <span class="track-artist">Pink Floyd</span>
+            </div>
+          </div>
+          <div class="curated-pick">
+            <div class="curated-pick-img-wrap">
+              <img
+                src="assets/home-assets/pink-floyd.png"
+                alt="Pink Floyd - Time album cover"
+              />
+            </div>
+            <div class="curated-pick-info-wrap">
+              <span class="track-title">Time</span><br />
+              <span class="track-artist">Pink Floyd</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="copyright-2025">
+        Copyright © 2025 C'Groovy. All Rights Reserved.
+      </div>
     </footer>
   </body>
 </html>

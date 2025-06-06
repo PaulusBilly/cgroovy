@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/register.css" />
+  </head>
+  <body>
+    <main class="register-page">
+      <section class="hero-section">
+        <div style="flex: 1"></div>
+        <div>
+          <div class="hero-title">Elevate your music experience</div>
+          <div class="hero-desc">Just create your account right now bro</div>
+        </div>
+      </section>
+      <section class="register-form-section">
+        <form class="register-form-container" id="registerForm" novalidate>
+          <h1>Create your account</h1>
+          <p>Join us now to start listening</p>
+          <div class="form-group">
+            <label for="fullname">Full name</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              required
+              autocomplete="name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="email"
+            />
+          </div>
+          <div class="form-group form-group-row">
+            <div class="form-half">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                minlength="6"
+                autocomplete="new-password"
+              />
+            </div>
+            <div class="form-half">
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                required
+                minlength="6"
+                autocomplete="new-password"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              required
+              min="13"
+              max="120"
+            />
+          </div>
+          <div class="gender-group">
+            <span style="color: #fff; font-size: 1rem">Gender:</span>
+            <input type="radio" id="male" name="gender" value="male" required />
+            <label for="male">Male</label>
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              required
+            />
+            <label for="female">Female</label>
+          </div>
+          <button type="submit" class="register-btn">Create Account</button>
+          <div class="form-footer">
+            Already have an account?
+            <a href="login.html">Sign In</a>
+          </div>
+          <div id="formError" class="form-error" style="display: none"></div>
+        </form>
+      </section>
+    </main>
+    <script src="scripts/register.js"></script>
+  </body>
+</html>
