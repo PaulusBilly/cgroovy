@@ -34,13 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // --- NEW: Activate tab and render based on URL genre param ---
   function getGenreFromURL() {
     const params = new URLSearchParams(window.location.search);
     let genre = params.get("genre");
     if (genre) {
       genre = decodeURIComponent(genre);
-      // Normalize for R&B (handle both R&B and R%26B)
       if (genre === "R%26B") genre = "R&B";
     }
     return genre;
@@ -50,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let initialGenre = getGenreFromURL();
   if (!validGenres.includes(initialGenre)) initialGenre = "Pop";
 
-  // Activate the correct tab
   tabs.forEach((tab) => {
     if (tab.dataset.genre === initialGenre) {
       tab.classList.add("tab-active");

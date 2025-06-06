@@ -14,7 +14,6 @@ form.addEventListener("submit", function (e) {
   const pwd = password.value;
   const confirmPwd = confirmPassword.value;
 
-  // Full name required
   if (!fullname) {
     e.preventDefault();
     formError.textContent = "Full name is required.";
@@ -23,7 +22,6 @@ form.addEventListener("submit", function (e) {
     return;
   }
 
-  // Email required and format
   if (!email) {
     e.preventDefault();
     formError.textContent = "Email is required.";
@@ -38,7 +36,6 @@ form.addEventListener("submit", function (e) {
     return;
   }
 
-  // Password required and min length
   if (!pwd) {
     e.preventDefault();
     formError.textContent = "Password is required.";
@@ -53,7 +50,6 @@ form.addEventListener("submit", function (e) {
     return;
   }
 
-  // Confirm password required and match
   if (!confirmPwd) {
     e.preventDefault();
     formError.textContent = "Please confirm your password.";
@@ -68,7 +64,6 @@ form.addEventListener("submit", function (e) {
     return;
   }
 
-  // Age required and range
   if (!age) {
     e.preventDefault();
     formError.textContent = "Age is required.";
@@ -83,7 +78,6 @@ form.addEventListener("submit", function (e) {
     return;
   }
 
-  // Gender required
   if (!form.gender.value) {
     e.preventDefault();
     formError.textContent = "Please select your gender.";
@@ -91,7 +85,6 @@ form.addEventListener("submit", function (e) {
     return;
   }
 
-  // Redirect to index.html on successful validation
   e.preventDefault();
   window.location.href = "index.html";
 });

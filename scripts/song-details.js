@@ -1,12 +1,8 @@
-// scripts/song-details.js
-
-// Helper: get query param
 function getQueryParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(param);
 }
 
-// Find song by id (index in songData)
 function getSongById(id) {
   if (!window.songData) return null;
   const idx = parseInt(id, 10);
@@ -14,7 +10,6 @@ function getSongById(id) {
   return window.songData[idx];
 }
 
-// Load lyrics from file
 async function loadLyrics(lyricsPath) {
   try {
     const res = await fetch(lyricsPath);
@@ -45,9 +40,7 @@ async function renderSongDetails() {
   document.getElementById("audioSource").src = song.audio;
   document.getElementById("audioPlayer").load();
 
-  // Load lyrics
   const lyricsText = await loadLyrics(song.lyrics);
-  // Simple formatting: split by line, wrap in <p>
   const lines = lyricsText
     .split("\n")
     .map((line) =>
@@ -58,5 +51,4 @@ async function renderSongDetails() {
   document.getElementById("lyricsContainer").innerHTML = lines.join("");
 }
 
-// Wait for songData to be loaded (since it's a <script> before this one)
 window.addEventListener("DOMContentLoaded", renderSongDetails);

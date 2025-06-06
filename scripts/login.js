@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".sign-in-form-container");
   if (!form) return;
 
-  // Create or select error message container
   let errorDiv = document.querySelector(".form-error");
   if (!errorDiv) {
     errorDiv = document.createElement("div");
@@ -22,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let valid = true;
     let errorMsg = "";
 
-    // Email validation
     if (!email) {
       valid = false;
       errorMsg = "Email is required.";
@@ -31,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
       errorMsg = "Please enter a valid email address.";
     }
 
-    // Password validation
     if (valid && !password) {
       valid = false;
       errorMsg = "Password is required.";
@@ -44,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return false;
     }
 
-    // Redirect to index.html on successful validation
     e.preventDefault();
     window.location.href = "index.html";
   });
