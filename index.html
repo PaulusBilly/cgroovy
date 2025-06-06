@@ -14,7 +14,14 @@
           <span class="logo"><b>C'GROOVY</b></span>
           <ul class="nav-links">
             <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Songs</a></li>
+            <li class="nav-songs-dropdown">
+              <a href="#" class="songs-link"><b>Songs</b></a>
+              <div class="songs-dropdown-menu">
+                <a href="#" class="dropdown-item">Pop</a>
+                <a href="#" class="dropdown-item">R&amp;B</a>
+                <a href="#" class="dropdown-item">K-Pop</a>
+              </div>
+            </li>
             <li><a href="#">About Us</a></li>
           </ul>
         </div>
@@ -121,78 +128,121 @@
       </div>
       <div class="curated-picks-section">
         <h2>Start Your Journey Through Music with Our Curated Picks</h2>
-        <div class="curated-picks-list">
-          <div class="curated-pick">
-            <div class="curated-pick-img-wrap">
-              <img
-                src="assets/home-assets/pink-floyd.png"
-                alt="Pink Floyd - Time album cover"
-              />
+        <div style="display: flex; justify-content: center; width: 100%">
+          <div
+            class="curated-picks-slider-container"
+            style="position: relative; display: flex; align-items: center"
+          >
+            <button
+              class="curated-arrow-left"
+              style="
+                position: absolute;
+                left: -40px;
+                z-index: 2;
+                background: none;
+                border: none;
+                font-size: 2rem;
+                color: #fff;
+                cursor: pointer;
+              "
+            >
+              &#8592;
+            </button>
+            <div
+              class="curated-picks-list"
+              id="curatedPicksList"
+              style="overflow: hidden; width: 720px"
+            >
+              <div class="curated-picks-inner">
+                <div class="curated-pick">
+                  <div class="curated-pick-img-wrap">
+                    <img
+                      src="assets/home-assets/pink-floyd.png"
+                      alt="Pink Floyd - Time album cover"
+                    />
+                  </div>
+                  <div class="curated-pick-info-wrap">
+                    <span class="track-title">Time</span><br />
+                    <span class="track-artist">Pink Floyd</span>
+                  </div>
+                </div>
+                <div class="curated-pick">
+                  <div class="curated-pick-img-wrap">
+                    <img
+                      src="assets/home-assets/pink-floyd.png"
+                      alt="Pink Floyd - Time album cover"
+                    />
+                  </div>
+                  <div class="curated-pick-info-wrap">
+                    <span class="track-title">Time</span><br />
+                    <span class="track-artist">Pink Floyd</span>
+                  </div>
+                </div>
+                <div class="curated-pick">
+                  <div class="curated-pick-img-wrap">
+                    <img
+                      src="assets/home-assets/pink-floyd.png"
+                      alt="Pink Floyd - Time album cover"
+                    />
+                  </div>
+                  <div class="curated-pick-info-wrap">
+                    <span class="track-title">Time</span><br />
+                    <span class="track-artist">Pink Floyd</span>
+                  </div>
+                </div>
+                <div class="curated-pick">
+                  <div class="curated-pick-img-wrap">
+                    <img
+                      src="assets/home-assets/pink-floyd.png"
+                      alt="Pink Floyd - Time album cover"
+                    />
+                  </div>
+                  <div class="curated-pick-info-wrap">
+                    <span class="track-title">Time</span><br />
+                    <span class="track-artist">Pink Floyd</span>
+                  </div>
+                </div>
+                <div class="curated-pick">
+                  <div class="curated-pick-img-wrap">
+                    <img
+                      src="assets/home-assets/pink-floyd.png"
+                      alt="Pink Floyd - Time album cover"
+                    />
+                  </div>
+                  <div class="curated-pick-info-wrap">
+                    <span class="track-title">Time</span><br />
+                    <span class="track-artist">Pink Floyd</span>
+                  </div>
+                </div>
+                <div class="curated-pick">
+                  <div class="curated-pick-img-wrap">
+                    <img
+                      src="assets/home-assets/pink-floyd.png"
+                      alt="Pink Floyd - Time album cover"
+                    />
+                  </div>
+                  <div class="curated-pick-info-wrap">
+                    <span class="track-title">Time</span><br />
+                    <span class="track-artist">Pink Floyd</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="curated-pick-info-wrap">
-              <span class="track-title">Time</span><br />
-              <span class="track-artist">Pink Floyd</span>
-            </div>
-          </div>
-          <div class="curated-pick">
-            <div class="curated-pick-img-wrap">
-              <img
-                src="assets/home-assets/pink-floyd.png"
-                alt="Pink Floyd - Time album cover"
-              />
-            </div>
-            <div class="curated-pick-info-wrap">
-              <span class="track-title">Time</span><br />
-              <span class="track-artist">Pink Floyd</span>
-            </div>
-          </div>
-          <div class="curated-pick">
-            <div class="curated-pick-img-wrap">
-              <img
-                src="assets/home-assets/pink-floyd.png"
-                alt="Pink Floyd - Time album cover"
-              />
-            </div>
-            <div class="curated-pick-info-wrap">
-              <span class="track-title">Time</span><br />
-              <span class="track-artist">Pink Floyd</span>
-            </div>
-          </div>
-          <div class="curated-pick">
-            <div class="curated-pick-img-wrap">
-              <img
-                src="assets/home-assets/pink-floyd.png"
-                alt="Pink Floyd - Time album cover"
-              />
-            </div>
-            <div class="curated-pick-info-wrap">
-              <span class="track-title">Time</span><br />
-              <span class="track-artist">Pink Floyd</span>
-            </div>
-          </div>
-          <div class="curated-pick">
-            <div class="curated-pick-img-wrap">
-              <img
-                src="assets/home-assets/pink-floyd.png"
-                alt="Pink Floyd - Time album cover"
-              />
-            </div>
-            <div class="curated-pick-info-wrap">
-              <span class="track-title">Time</span><br />
-              <span class="track-artist">Pink Floyd</span>
-            </div>
-          </div>
-          <div class="curated-pick">
-            <div class="curated-pick-img-wrap">
-              <img
-                src="assets/home-assets/pink-floyd.png"
-                alt="Pink Floyd - Time album cover"
-              />
-            </div>
-            <div class="curated-pick-info-wrap">
-              <span class="track-title">Time</span><br />
-              <span class="track-artist">Pink Floyd</span>
-            </div>
+            <button
+              class="curated-arrow-right"
+              style="
+                position: absolute;
+                right: -40px;
+                z-index: 2;
+                background: none;
+                border: none;
+                font-size: 2rem;
+                color: #fff;
+                cursor: pointer;
+              "
+            >
+              &#8594;
+            </button>
           </div>
         </div>
       </div>
@@ -203,4 +253,6 @@
       </div>
     </footer>
   </body>
+  <script src="./jquery-3.7.1.min.js"></script>
+  <script src="scripts/home.js"></script>
 </html>
