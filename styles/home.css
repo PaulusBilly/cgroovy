@@ -52,6 +52,7 @@ body {
 .nav-links li a.active,
 .nav-links li a:hover {
   background: #232323;
+  font-weight: 700;
 }
 .navbar-right {
   display: flex;
@@ -398,5 +399,5 @@ body {
   border-radius: 12px;
 }
 .songs-link {
-  font-weight: 700;
+  font-weight: 500;
 }

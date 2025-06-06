@@ -1,0 +1,95 @@
+/* About Us Page Styles */
+
+.about-section {
+  max-width: 900px;
+  margin: 64px auto;
+  padding: 48px 32px;
+  background: rgba(25, 25, 25, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.25);
+  color: #faf9f6;
+}
+
+.about-title {
+  font-size: 2.8rem;
+  margin-bottom: 24px;
+}
+
+.about-heading {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #c8984c;
+}
+
+.about-paragraph {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  color: #e3e3e3;
+}
+
+.journey-timeline-container {
+  display: flex;
+  justify-content: center;
+}
+
+.journey-timeline {
+  position: relative;
+  padding-left: 32px;
+  border-left: 3px solid #c8984c;
+  margin-bottom: 32px;
+}
+
+.journey-milestone {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.journey-dot {
+  position: absolute;
+  left: -41px;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: #c8984c;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.journey-milestone-text {
+  margin-left: 8px;
+  color: #e3e3e3;
+  font-size: 1.1rem;
+}
+
+.journey-milestone:last-child {
+  margin-bottom: 0;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.team-member-card {
+  flex: 1 1 220px;
+  background: #181818;
+  border-radius: 12px;
+  padding: 24px;
+  min-width: 220px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.team-member-name {
+  margin-bottom: 8px;
+  color: #faf9f6;
+}
+
+.team-member-position {
+  color: #c8984c;
+  margin-bottom: 4px;
+}
+
+.team-member-desc {
+  color: #e3e3e3;
+}

@@ -21,30 +21,30 @@ body {
 }
 
 /* Layout container for lyrics and song details */
-.details-flex-container {
+.song-details-layout {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 24px; /* More than 12px for better breathing room, adjust as needed */
+  gap: 24px;
   margin-top: 48px;
   margin-bottom: 48px;
 }
 
-.rectangle-parent,
-.rectangle-group {
+.lyrics-section,
+.song-info-section {
   position: relative;
   top: unset;
   left: unset;
   margin: 0;
 }
 
-.rectangle-parent {
+.lyrics-section {
   width: 607px;
   height: 1167px;
   background: none;
 }
 
-.group-child {
+.lyrics-section-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -54,11 +54,11 @@ body {
   border: 0.5px solid #454545;
   box-sizing: border-box;
   width: 607px;
-  height: 1167px;
+  height: 1250px;
   z-index: 0;
 }
 
-.lyrics {
+.lyrics-title {
   position: absolute;
   top: 68px;
   left: 78px;
@@ -81,7 +81,7 @@ body {
 .blank-line {
   margin: 0;
 }
-.verse-1-touch-container {
+.lyrics-content-wrapper {
   position: absolute;
   top: 150px;
   left: 78px;
@@ -89,12 +89,22 @@ body {
   display: flex;
   align-items: center;
   width: 421px;
+  height: 950px;
+  overflow-y: auto;
   text-shadow: 0.5px 0 0 #454545, 0 0.5px 0 #454545, -0.5px 0 0 #454545,
     0 -0.5px 0 #454545;
   color: #9c9c9c;
   z-index: 1;
+  background: none;
 }
-.rectangle-group {
+
+.lyrics-content {
+  width: 100%;
+  height: 100%;
+  overflow-wrap: break-word;
+}
+
+.song-info-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,23 +116,23 @@ body {
   background: none;
   position: relative;
 }
-.group-item {
+.song-info-bg {
   position: absolute;
   top: 0px;
   left: 0px;
-  border-radius: 16px;
+  border-radius: 6px;
   background-color: #121212;
   border: 0.5px solid #454545;
   box-sizing: border-box;
   width: 361px;
-  height: 1168px;
+  height: 1250px;
   z-index: 0;
 }
-.sombr {
+.song-artist {
   position: relative;
   top: 72px;
   left: 0;
-  color: #efefef;
+  color: #808080;
   font-size: 24px;
   display: flex;
   align-items: center;
@@ -130,8 +140,9 @@ body {
   text-shadow: 1px 0 0 #454545, 0 1px 0 #454545, -1px 0 0 #454545,
     0 -1px 0 #454545;
   z-index: 1;
+  padding: 12px;
 }
-.back-to-friends {
+.song-title {
   position: relative;
   top: 64px;
   left: 0;
@@ -143,19 +154,20 @@ body {
   text-shadow: 1px 0 0 #454545, 0 1px 0 #454545, -1px 0 0 #454545,
     0 -1px 0 #454545;
   z-index: 1;
+  padding: 12px;
 }
-.image-icon {
+.song-cover {
   position: relative;
   top: 38px;
   left: 0;
   border-radius: 12px;
-  width: 278px;
-  height: 278px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   z-index: 1;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
 }
-.back-to-friends1 {
+.song-description {
   position: relative;
   top: 88px;
   left: 0;
@@ -169,8 +181,9 @@ body {
     0 -1px 0 #454545;
   z-index: 1;
   margin-bottom: 48px;
+  padding: 12px;
 }
-.group-parent {
+.song-details-page {
   width: 100%;
   position: relative;
   min-height: 1168px;
@@ -183,19 +196,20 @@ body {
   align-items: center;
 }
 
-.audio-player-container {
+.audio-player-wrapper {
   position: relative;
   top: 120px;
   left: 0;
   width: 90%;
   background: #181818;
-  border-radius: 18px;
+  border-radius: 12px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
   padding: 40px 24px 32px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 1;
+  padding: 12px;
 }
 
 #audioPlayer {
@@ -230,24 +244,24 @@ body {
 }
 
 @media (max-width: 1100px) {
-  .details-flex-container {
+  .song-details-layout {
     flex-direction: column;
     align-items: center;
     gap: 24px;
   }
-  .rectangle-parent,
-  .rectangle-group {
+  .lyrics-section,
+  .song-info-section {
     width: 95vw;
     min-width: 320px;
     max-width: 100vw;
     height: auto;
   }
-  .group-child,
-  .group-item {
+  .lyrics-section-bg,
+  .song-info-bg {
     width: 100%;
     height: 100%;
   }
-  .image-icon {
+  .song-cover {
     width: 90vw;
     max-width: 320px;
     height: auto;

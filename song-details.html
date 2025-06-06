@@ -8,24 +8,44 @@
     <title>C'Groovy - Song Details</title>
   </head>
   <body>
-    <div class="group-parent">
-      <div class="details-flex-container">
-        <div class="rectangle-parent">
-          <div class="group-child"></div>
-          <div class="lyrics">Lyrics</div>
-          <div class="verse-1-touch-container">
-            <div class="verse-1-touch-container1" id="lyricsContainer">
+    <div class="song-details-page">
+      <a
+        href="#"
+        class="back-icon"
+        onclick="window.history.back(); return false;"
+        style="
+          position: absolute;
+          top: 32px;
+          left: 32px;
+          z-index: 100;
+          text-decoration: none;
+          color: #faf9f6;
+          font-size: 2.2rem;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        "
+      >
+        <span style="font-size: 2.2rem; line-height: 1">&#8592;</span>
+        <span style="font-size: 1.1rem">Back</span>
+      </a>
+      <div class="song-details-layout">
+        <div class="lyrics-section">
+          <div class="lyrics-section-bg"></div>
+          <div class="lyrics-title">Lyrics</div>
+          <div class="lyrics-content-wrapper">
+            <div class="lyrics-content" id="lyricsContainer">
               <!-- Lyrics will be loaded here -->
             </div>
           </div>
         </div>
-        <div class="rectangle-group" id="songDetails">
-          <div class="group-item"></div>
-          <img class="image-icon" id="songCover" src="" alt="Song cover" />
-          <div class="back-to-friends" id="songName"></div>
-          <div class="sombr" id="songArtist"></div>
-          <div class="back-to-friends1" id="songDesc"></div>
-          <div class="audio-player-container">
+        <div class="song-info-section" id="songDetails">
+          <div class="song-info-bg"></div>
+          <img class="song-cover" id="songCover" src="" alt="Song cover" />
+          <div class="song-title" id="songName"></div>
+          <div class="song-artist" id="songArtist"></div>
+          <div class="song-description" id="songDesc"></div>
+          <div class="audio-player-wrapper">
             <audio id="audioPlayer" controls>
               <source id="audioSource" src="" type="audio/mpeg" />
               Your browser does not support the audio element.
