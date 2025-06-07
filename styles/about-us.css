@@ -91,3 +91,36 @@
 .team-member-desc {
   color: #e3e3e3;
 }
+
+@media (max-width: 800px) {
+  .about-section {
+    max-width: 98vw;
+    margin: 24px auto;
+    padding: 16px 4vw;
+  }
+  .about-title {
+    font-size: 1.3rem;
+  }
+  .about-heading {
+    font-size: 1.1rem;
+  }
+  .team-members {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .team-member-card {
+    padding: 8px;
+    min-width: 80px;
+  }
+  .journey-timeline {
+    padding-left: 12px;
+  }
+  .journey-dot {
+    left: -21px;
+    width: 14px;
+    height: 14px;
+  }
+  .journey-milestone-text {
+    font-size: 0.95rem;
+  }
+}
